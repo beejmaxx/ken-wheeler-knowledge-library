@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public, text-first research archive of Ken Wheeler writings, reference lists, and source metadata.">
+    <meta name="theme-color" content="#131512">
+    <title>Ken Wheeler Knowledge Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ken Wheeler Knowledge Library home">
+        <span class="brand-mark" aria-hidden="true">KW</span>
+        <span>Knowledge Library</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#archive">Archive</a><a href="#method">Method</a><a href="#use">Use it</a><a href="#status">Status</a>
+        <a class="source-link" href="https://github.com/beejmaxx/ken-wheeler-knowledge-library">Source ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero page-shell">
+        <div class="hero-copy reveal">
+          <p class="kicker">Public · text-first · provenance-aware</p>
+          <h1>Ideas collected.<br><em>Sources kept visible.</em></h1>
+          <p class="lede">A searchable archive of Ken Wheeler writings, reading lists, research leads, and source metadata—organized for direct study without hiding rights or extraction boundaries.</p>
+          <div class="hero-actions"><a class="button primary" href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/tree/main/library">Browse the library</a><a class="button quiet" href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/library/catalog.json">Inspect the catalog ↗</a></div>
+          <dl class="stats" aria-label="Archive statistics"><div><dt>17</dt><dd>source records</dd></div><div><dt>13</dt><dd>searchable exports</dd></div><div><dt>10</dt><dd>author works</dd></div><div><dt>30</dt><dd>external links</dd></div></dl>
+        </div>
+        <div class="field-diagram reveal" aria-label="Abstract catalog field diagram">
+          <div class="field-ring ring-a"></div><div class="field-ring ring-b"></div><div class="field-axis horizontal"></div><div class="field-axis vertical"></div>
+          <div class="field-core"><strong>17</strong><span>records</span></div>
+          <span class="field-note north">TEXT / 13</span><span class="field-note east">LINKS / 30</span><span class="field-note south">OCR / 03</span><span class="field-note west">META / 01</span>
+          <p>Corpus structure—not a diagram of physical theory.</p>
+        </div>
+      </section>
+
+      <section class="thesis"><div class="page-shell"><span>THE PROJECT</span><p>Keep the text easy to search, the source easy to trace, and the permission status impossible to confuse.</p></div></section>
+
+      <section id="archive" class="section page-shell">
+        <div class="section-heading reveal"><p class="section-label">01 / WHAT IT SOLVES</p><h2>A corpus is more useful when its <em>boundaries survive extraction.</em></h2><p>Locally collected PDFs, lists, transcripts, and web links arrive with different authorship, rights, and extraction quality. This library preserves those distinctions instead of flattening them into one pile.</p></div>
+        <div class="category-grid">
+          <article class="category-card dominant reveal"><div><span>Author works</span><strong>10</strong></div><h3>Searchable primary texts</h3><p>Works spanning magnetism, metaphysics, Buddhism, energy, land, and practical lists, retained with page-sequence markers.</p><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/tree/main/library/author-works">Browse author works ↗</a></article>
+          <article class="category-card reveal"><div><span>Reference lists</span><strong>02</strong></div><h3>Indexes and reading</h3><p>The author's free-book index and recommended reading list remain separate from authored works.</p></article>
+          <article class="category-card reveal"><div><span>Visual documents</span><strong>03</strong></div><h3>Placeholders, not fiction</h3><p>Image-only PDFs keep page placeholders and `needs-ocr` metadata rather than invented text.</p></article>
+          <article class="category-card reveal"><div><span>Restricted</span><strong>01</strong></div><h3>Metadata only</h3><p>One explicitly restricted document is represented without republishing its prose.</p></article>
+          <article class="category-card reveal"><div><span>Research leads</span><strong>01</strong></div><h3>Discovery, labeled</h3><p>A third-party interview announcement is retained as a Tier-D lead, not independent support for a claim.</p></article>
+        </div>
+      </section>
+
+      <section class="section features-section">
+        <div class="page-shell features-layout">
+          <div class="feature-intro reveal"><p class="section-label light">02 / IMPORTANT FEATURES</p><h2>Plain files.<br>Rich provenance.</h2><p>The repository favors durable research objects over a proprietary reader or database.</p></div>
+          <div class="feature-list">
+            <article class="reveal"><span>01</span><div><h3>Page-preserving text</h3><p>Markers such as <code>===== PAGE 0007 =====</code> make search results traceable to each source PDF sequence.</p></div></article>
+            <article class="reveal"><span>02</span><div><h3>Checksum identity</h3><p>Exact source hashes and original filenames identify files while keeping private machine paths out of the repository.</p></div></article>
+            <article class="reveal"><span>03</span><div><h3>Evidence tiers</h3><p>Primary material establishes what the author wrote. Discovery leads remain explicitly lower-confidence.</p></div></article>
+            <article class="reveal"><span>04</span><div><h3>Rights-aware export</h3><p>Public access is not treated as an open license, and restricted or unknown-rights material stays bounded.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section page-shell method-section">
+        <div class="section-heading compact reveal"><p class="section-label">03 / HOW IT WORKS</p><h2>From collected source<br>to inspectable record.</h2></div>
+        <ol class="steps">
+          <li class="reveal"><span>01</span><h3>Ingest</h3><p>Extract page-aware text and record the original source checksum.</p></li>
+          <li class="reveal"><span>02</span><h3>Classify</h3><p>Assign category, evidence tier, rights state, and extraction status.</p></li>
+          <li class="reveal"><span>03</span><h3>Export</h3><p>Create readable, path-safe text files while excluding restricted prose and binary references.</p></li>
+          <li class="reveal"><span>04</span><h3>Validate</h3><p>Check catalog coverage, page markers, privacy, metadata-only rules, and searchable representative text.</p></li>
+        </ol>
+      </section>
+
+      <section id="use" class="section use-section">
+        <div class="page-shell use-layout">
+          <div class="reveal"><p class="section-label">04 / INSTALL & RUN</p><h2>Clone.<br>Search.<br>Verify.</h2><p>No package installation or build step is required. Node.js is used only for the maintenance scripts and integrity tests.</p><div class="doc-links"><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/README.md">Documentation ↗</a><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/library/README.md">Library guide ↗</a><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/research/catalog/author-links.json">Author links ↗</a></div></div>
+          <div class="terminal reveal" aria-label="Commands to use the archive">
+            <div class="terminal-head"><span>Local research setup</span><small>shell</small></div>
+            <div class="command"><code>git clone https://github.com/beejmaxx/ken-wheeler-knowledge-library.git</code><button type="button" data-copy="git clone https://github.com/beejmaxx/ken-wheeler-knowledge-library.git">Copy</button></div>
+            <div class="command"><code>cd ken-wheeler-knowledge-library</code><button type="button" data-copy="cd ken-wheeler-knowledge-library">Copy</button></div>
+            <div class="command"><code>rg -n -i 'dielectricity' library/</code><button type="button" data-copy="rg -n -i 'dielectricity' library/">Copy</button></div>
+            <div class="command"><code>node --test tests/library.test.mjs</code><button type="button" data-copy="node --test tests/library.test.mjs">Copy</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="status" class="section status-section">
+        <div class="page-shell status-layout">
+          <div class="reveal"><p class="section-label light">05 / STATUS & LIMITATIONS</p><h2>Searchable now.<br>Careful about gaps.</h2></div>
+          <div class="status-grid">
+            <article class="reveal"><strong>Current corpus</strong><p>Seventeen ingested records produce thirteen non-empty text exports, with thirty additional author-linked or discovered documents cataloged externally.</p></article>
+            <article class="reveal"><strong>Extraction gaps</strong><p>Three image-only PDFs need OCR. Their page placeholders are not transcriptions.</p></article>
+            <article class="reveal"><strong>Rights boundaries</strong><p>“Author-shared free download” records public access, not an inferred open-content license.</p></article>
+            <article class="reveal"><strong>Claim boundaries</strong><p>The archive documents sources. It does not independently validate scientific, historical, religious, health, or practical claims.</p></article>
+            <article class="reveal"><strong>Visual material excluded</strong><p>Original PDFs and local JPG references are represented through text metadata rather than republished binaries.</p></article>
+            <article class="reveal"><strong>External links change</strong><p>The broader discovery catalog points to third-party mirrors that may move or disappear.</p></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-shell"><div><span class="brand-mark">KW</span><p>Ken Wheeler Knowledge Library</p></div><nav aria-label="Footer navigation"><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library">Source</a><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/library/catalog.json">Catalog</a><a href="https://github.com/beejmaxx/ken-wheeler-knowledge-library/blob/main/research/README.md">Evidence policy</a></nav><small>Public project showcase · <span data-year></span></small></footer>
+  </body>
+</html>

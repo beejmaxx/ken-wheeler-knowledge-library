@@ -1,11 +1,14 @@
 # Ken Wheeler Knowledge Library
 
+[View the project showcase](https://beejmaxx.github.io/ken-wheeler-knowledge-library/)
+
 A public, GitHub-native text archive of locally collected Ken Wheeler writings,
 reading lists, transcripts, and web-discovered source links.
 
 The durable object here is the corpus: readable text, page markers, checksums,
-provenance, rights labels, and evidence tiers. There is no website framework,
-generated search database, package manager, or hosting configuration.
+provenance, rights labels, and evidence tiers. There is no application
+framework, generated search database, or package manager; the static project
+showcase lives separately under `site/`.
 
 Start with the [`library` guide](library/README.md), the machine-readable
 [`source catalog`](library/catalog.json), and the broader

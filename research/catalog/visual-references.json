@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "updated": "2026-08-11",
-  "rights_note": "These locally supplied images are included for research organization; no open license is asserted.",
+  "description": "Textual metadata for two local image references. The binary images are intentionally excluded from this text-first repository.",
+  "rights_note": "No open license was identified; checksums allow the local files to be matched without republishing them.",
   "items": [
     {
-      "filename": "antenna.jpg",
       "original_filename": "ANTENNA.jpg",
       "title": "Electroculture Fractal Antenna",
       "creator": "Ken Wheeler",
@@ -17,11 +17,10 @@
       "sha256": "618e374f63132f3dcd9ffc0adc47e2c63f2402b91bb479b2e0f9cc5a5027aaad"
     },
     {
-      "filename": "authority.jpg",
       "original_filename": "authority.jpg",
       "title": "Origins of the Term ‘Quantum’",
       "creator": "Unknown; locally collected with Ken Wheeler materials",
-      "description": "Text-heavy graphic arguing about the history and meaning of the word quantum; retained as a claim-bearing visual, not as verified authority.",
+      "description": "Text-heavy graphic arguing about the history and meaning of the word quantum; retained as a claim-bearing visual reference, not as verified authority.",
       "rights": "unknown",
       "width": 1792,
       "height": 2156,

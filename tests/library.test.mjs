@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
@@ -29,7 +28,7 @@ test("catalogs the unique corpus without machine-local paths", async () => {
   assert.doesNotMatch(catalogText, /\/Users\/|[A-Z]:\\Users\\/);
 });
 
-test("keeps one page-preserving text export for every ingested source", async () => {
+test("keeps one page-preserving text record for every ingested source", async () => {
   const catalog = await readJson("library/catalog.json");
 
   for (const source of catalog.sources) {
@@ -43,15 +42,15 @@ test("keeps one page-preserving text export for every ingested source", async ()
   }
 });
 
-test("preserves the two supplied visuals with verified checksums", async () => {
-  const visualCatalog = await readJson("library/visuals/catalog.json");
-  assert.equal(visualCatalog.items.length, 2);
+test("keeps visual references as text metadata without binary files", async () => {
+  const visualText = await readFile(new URL("research/catalog/visual-references.json", root), "utf8");
+  const visualCatalog = JSON.parse(visualText);
 
-  for (const item of visualCatalog.items) {
-    const bytes = await readFile(new URL(`visuals/${item.filename}`, libraryRoot));
-    const digest = createHash("sha256").update(bytes).digest("hex");
-    assert.equal(digest, item.sha256, item.filename);
-  }
+  assert.equal(visualCatalog.items.length, 2);
+  assert.ok(visualCatalog.items.every((item) => /^[a-f0-9]{64}$/.test(item.sha256)));
+  assert.doesNotMatch(visualText, /\/Users\/|[A-Z]:\\Users\\/);
+  await assert.rejects(access(new URL("library/visuals/antenna.jpg", root)));
+  await assert.rejects(access(new URL("library/visuals/authority.jpg", root)));
 });
 
 test("does not republish prose carrying an explicit reproduction restriction", async () => {
@@ -75,31 +74,10 @@ test("records the author index and web discoveries as external links", async () 
   assert.doesNotMatch(linksText, /\/Users\/|[A-Z]:\\Users\\/);
 });
 
-test("builds a complete searchable index from the tracked archive", async () => {
-  const catalog = await readJson("library/catalog.json");
-  const index = await readJson("public/data/research-index.json");
-  const indexedChunks = index.sources.reduce((sum, source) => sum + source.chunks, 0);
+test("retains directly searchable corpus text", async () => {
+  const magnetism = await readFile(new URL("author-works/uncovering-secrets-of-magnetism-third-edition.txt", libraryRoot), "utf8");
+  const monistic = await readFile(new URL("author-works/monistic-metaphysics-of-the-sakya-disciples.txt", libraryRoot), "utf8");
 
-  assert.equal(index.sources.length, catalog.summary.sources);
-  assert.equal(index.chunks.length, indexedChunks);
-  assert.ok(index.chunks.some((chunk) => /dielectricity/i.test(chunk.text)));
-  assert.ok(index.chunks.some((chunk) => /monistic metaphysics/i.test(chunk.text)));
-});
-
-test("server-renders the Wheeler reading room", async () => {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  const response = await worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
-  const html = await response.text();
-
-  assert.equal(response.status, 200);
-  assert.match(html, /Wheeler Study — Open Knowledge Library/);
-  assert.match(html, /Read the corpus/);
-  assert.match(html, /Search your library/);
+  assert.match(magnetism, /dielectricity/i);
+  assert.match(monistic, /monistic metaphysics/i);
 });

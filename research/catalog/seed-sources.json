@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-11",
+  "repository_visibility": "public",
+  "evidence_policy": {
+    "A": "Ken Wheeler primary text or author-supplied index; authoritative for what Wheeler wrote, not independent verification of a claim.",
+    "B": "Direct recording, transcript, or contemporaneous context.",
+    "C": "Independent scholarly or technical context.",
+    "D": "Discovery lead or unverified third-party reference."
+  },
+  "rights_note": "Free access is not the same as an open license. Rights labels describe the available evidence and do not assert public-domain status.",
+  "sources": [
+    {
+      "source_id": "assassination-of-the-buddha",
+      "title": "The Assassination of the Buddha",
+      "creator": "Ken L. Wheeler",
+      "date": "2021",
+      "kind": "author-essay",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1O_JsQXV_F3eR5LWXG2NEAA8IoyKGC5oL/view",
+      "topics": ["buddhism", "gotama", "nikayas", "doctrine"]
+    },
+    {
+      "source_id": "aurea-sapientia",
+      "title": "Aurea Sapientia",
+      "creator": "Ken L. Wheeler",
+      "kind": "visual-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1NXMM8GjqiFsg8KeayUFId6YtrP873PRl/view",
+      "topics": ["metaphysics", "cosmology", "monism", "diagram"]
+    },
+    {
+      "source_id": "topmost-books-reading-list",
+      "title": "Topmost Books",
+      "creator": "Ken L. Wheeler",
+      "kind": "reading-list",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1C_wgNprUYtREQgVpInCQp2_Fi0HRMUTT/view",
+      "topics": ["bibliography", "neoplatonism", "metaphysics", "buddhism"]
+    },
+    {
+      "source_id": "cosmic-unity",
+      "title": "Cosmic Unity",
+      "creator": "Ken L. Wheeler",
+      "date": "2023-09",
+      "kind": "visual-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["cosmology", "unity", "diagram"]
+    },
+    {
+      "source_id": "definitions-of-nature-and-phenomena",
+      "title": "Definitions of Nature & Its Phenomena, with a Primer on Cosmology & Ontology",
+      "creator": "Ken L. Wheeler",
+      "date": "2020-12",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1K_0zJJd4U1QKpl8aHeZlIJebmKCttZtk/view",
+      "topics": ["definitions", "cosmology", "ontology", "field-theory"]
+    },
+    {
+      "source_id": "energy",
+      "title": "Energy",
+      "creator": "Ken L. Wheeler",
+      "kind": "author-essay",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["energy", "inertia", "field-theory"]
+    },
+    {
+      "source_id": "energy-unification",
+      "title": "Energy Unification",
+      "creator": "Ken L. Wheeler",
+      "date": "2023-04",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["energy", "light", "matter", "electricity", "dielectricity"]
+    },
+    {
+      "source_id": "long-term-survival-food-list",
+      "title": "Long-Term Survival Food List & Accessory Items",
+      "creator": "Ken L. Wheeler",
+      "date": "2022",
+      "kind": "author-guide",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["food", "preparedness", "survival"]
+    },
+    {
+      "source_id": "uncovering-secrets-of-magnetism-third-edition",
+      "title": "Uncovering the Missing Secrets of Magnetism, Third Edition",
+      "creator": "Ken L. Wheeler",
+      "kind": "author-book",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://archive.org/download/magnetism1small/magnetism1small.pdf",
+      "topics": ["magnetism", "dielectricity", "aether", "field-theory"]
+    },
+    {
+      "source_id": "my-free-books-index",
+      "title": "My Free Books",
+      "creator": "Ken L. Wheeler",
+      "kind": "author-index",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["bibliography", "author-index", "free-downloads"]
+    },
+    {
+      "source_id": "top-secrets-of-buying-raw-land",
+      "title": "Top Secrets of Buying Raw Land!",
+      "creator": "Ken L. Wheeler",
+      "date": "2023-01",
+      "kind": "author-guide",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "topics": ["land", "property", "guide"]
+    },
+    {
+      "source_id": "solar-power-wiring-diagram",
+      "title": "Solar Power Wiring Diagram",
+      "creator": "Ken L. Wheeler",
+      "kind": "visual-guide",
+      "tier": "A",
+      "rights": "unknown",
+      "topics": ["solar", "battery", "wiring", "diagram"]
+    },
+    {
+      "source_id": "theurgy-of-liberation",
+      "title": "A Primer on the Theurgy of Liberation as Against ‘Meditation’ Dogma",
+      "creator": "Ken L. Wheeler",
+      "date": "2022-04",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://archive.org/download/theurgy_202203/THEURGY.pdf",
+      "topics": ["theurgy", "liberation", "meditation", "metaphysics"]
+    },
+    {
+      "source_id": "secret-of-water",
+      "title": "The Perfect Harmonic Proportionality & Incommensurability of the Water Molecule",
+      "creator": "Ken L. Wheeler",
+      "date": "2021-11",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "all-rights-reserved",
+      "url": "https://drive.google.com/file/d/1plnTHFFXuc3zSvLGfpK-b-FeToEFbeRK/view",
+      "topics": ["water", "geometry", "harmonics", "consciousness"]
+    },
+    {
+      "source_id": "indefinite-dyad-in-plotinus",
+      "title": "The Indefinite Dyad in Plotinus’ Metaphysics & Mysticism",
+      "creator": "Ken L. Wheeler",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1igB4Lc00TkU11Lc3KuShbJiqKhMPB4UO/view",
+      "mirror_url": "https://community.oldworld.app/uploads/short-url/glvoq4NOnbYPaRKzGLv4aKItatP.pdf",
+      "topics": ["plotinus", "indefinite-dyad", "monism", "metaphysics", "mysticism"]
+    },
+    {
+      "source_id": "monistic-metaphysics-of-the-sakya-disciples",
+      "title": "Monistic Metaphysics of the Sakya Disciples",
+      "creator": "Ken L. Wheeler",
+      "kind": "author-treatise",
+      "tier": "A",
+      "rights": "author-shared-free-download",
+      "url": "https://drive.google.com/file/d/1Z_ZzRX2V8zuZHbacYA60kSPGFQ6zLUeh/view",
+      "mirror_url": "https://concaveearth.net/uploads/short-url/7hATMtc7iQBawBH5JL7OQtV77HB.pdf",
+      "topics": ["buddhism", "monism", "metaphysics", "sakya"]
+    },
+    {
+      "source_id": "ken-wheeler-aether-interview-announcement",
+      "title": "‘The Aether’ — Ken Wheeler Coming to MrAstrotheology",
+      "creator": "MrAstrotheology",
+      "date": "2021-07-15",
+      "kind": "youtube-transcript",
+      "tier": "D",
+      "rights": "research-only",
+      "url": "https://www.youtube.com/watch?v=WbUw-X684w8",
+      "topics": ["aether", "interview", "video-lead"]
+    }
+  ]
+}

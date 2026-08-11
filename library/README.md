@@ -5,8 +5,9 @@ This is the tracked, path-safe export of the Ken Wheeler research corpus.
 ## Counts
 
 - 17 ingested source records;
-- 14 documents with usable embedded text;
+- 13 public searchable text exports;
 - 3 image-only PDFs awaiting reviewed OCR;
+- 1 all-rights-reserved document retained as metadata and page markers only;
 - 2 visual references;
 - 30 author-linked or web-discovered downloads in the broader catalog;
 - 7 duplicate local PDF filenames collapsed by SHA-256.
@@ -21,6 +22,8 @@ works that are linked but not yet ingested are listed in
 - `reference-lists/`: the author’s free-book index and recommended reading;
 - `visual-documents/`: page placeholders for image-only PDFs, explicitly marked
   `needs-ocr` in the catalog;
+- `restricted-metadata/`: source metadata and page markers without republished
+  prose where the document explicitly prohibits reproduction;
 - `research-leads/`: contextual material that cannot verify a claim by itself;
 - `visuals/`: two locally supplied JPG references plus descriptive metadata.
 

@@ -16,12 +16,14 @@ test("catalogs the unique corpus without machine-local paths", async () => {
 
   assert.equal(catalog.repository_visibility, "public");
   assert.equal(catalog.summary.sources, 17);
-  assert.equal(catalog.summary.non_empty_texts, 14);
+  assert.equal(catalog.summary.non_empty_texts, 13);
   assert.equal(catalog.summary.needs_ocr, 3);
+  assert.equal(catalog.summary.metadata_only, 1);
   assert.deepEqual(catalog.summary.categories, {
-    "author-works": 11,
+    "author-works": 10,
     "reference-lists": 2,
     "visual-documents": 3,
+    "restricted-metadata": 1,
     "research-leads": 1,
   });
   assert.doesNotMatch(catalogText, /\/Users\/|[A-Z]:\\Users\\/);
@@ -50,6 +52,17 @@ test("preserves the two supplied visuals with verified checksums", async () => {
     const digest = createHash("sha256").update(bytes).digest("hex");
     assert.equal(digest, item.sha256, item.filename);
   }
+});
+
+test("does not republish prose carrying an explicit reproduction restriction", async () => {
+  const catalog = await readJson("library/catalog.json");
+  const source = catalog.sources.find((item) => item.source_id === "secret-of-water");
+  const text = await readFile(new URL(source.text_file, libraryRoot), "utf8");
+
+  assert.equal(source.extraction_status, "metadata-only");
+  assert.equal(source.category, "restricted-metadata");
+  assert.doesNotMatch(text, /harmonic proportionality|basis of all life/i);
+  assert.equal((text.match(/^===== PAGE \d{4} =====$/gm) ?? []).length, source.pages);
 });
 
 test("records the author index and web discoveries as external links", async () => {

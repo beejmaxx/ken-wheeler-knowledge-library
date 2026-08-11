@@ -4,12 +4,14 @@
   "repository_visibility": "public",
   "summary": {
     "sources": 17,
-    "non_empty_texts": 14,
+    "non_empty_texts": 13,
     "needs_ocr": 3,
+    "metadata_only": 1,
     "categories": {
-      "author-works": 11,
+      "author-works": 10,
       "reference-lists": 2,
       "visual-documents": 3,
+      "restricted-metadata": 1,
       "research-leads": 1
     }
   },
@@ -328,9 +330,9 @@
       "url": "https://drive.google.com/file/d/1plnTHFFXuc3zSvLGfpK-b-FeToEFbeRK/view",
       "evidence_tier": "A",
       "rights": "all-rights-reserved",
-      "category": "author-works",
-      "extraction_status": "extracted",
-      "text_file": "author-works/secret-of-water.txt",
+      "category": "restricted-metadata",
+      "extraction_status": "metadata-only",
+      "text_file": "restricted-metadata/secret-of-water.txt",
       "pages": 11,
       "chunks": 12,
       "non_empty_characters": 14431,

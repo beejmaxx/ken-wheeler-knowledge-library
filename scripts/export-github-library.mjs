@@ -11,7 +11,7 @@ import { basename, resolve } from "node:path";
 const derivedRoot = resolve("research", "derived");
 const seedCatalogPath = resolve("research", "catalog", "seed-sources.json");
 const libraryRoot = resolve("library");
-const categoryOrder = ["author-works", "reference-lists", "visual-documents", "research-leads"];
+const categoryOrder = ["author-works", "reference-lists", "visual-documents", "restricted-metadata", "research-leads"];
 
 if (!existsSync(derivedRoot)) {
   throw new Error("No derived research directory. Ingest the local sources first.");
@@ -23,6 +23,9 @@ const seedCatalog = existsSync(seedCatalogPath)
 const seedById = new Map(seedCatalog.sources.map((source) => [source.source_id, source]));
 
 function categoryFor(manifest) {
+  if (manifest.rights === "all-rights-reserved") {
+    return "restricted-metadata";
+  }
   if (["youtube-transcript", "archived-web-page"].includes(manifest.kind)) {
     return "research-leads";
   }
@@ -71,9 +74,15 @@ for (const sourceId of readdirSync(derivedRoot).sort()) {
   const pages = parseJsonLines(pagesPath);
   const category = categoryFor(manifest);
   const relativeTextFile = `${category}/${sourceId}.txt`;
-  const text = exportText(pages);
-  const hasText = pages.some(({ text: pageText }) => pageText.trim().length > 0);
-  const extractionStatus = manifest.extraction.needs_ocr
+  const isRestricted = manifest.rights === "all-rights-reserved";
+  const publicPages = isRestricted
+    ? pages.map(({ page, source_id }) => ({ page, source_id, text: "" }))
+    : pages;
+  const text = exportText(publicPages);
+  const hasText = publicPages.some(({ text: pageText }) => pageText.trim().length > 0);
+  const extractionStatus = isRestricted
+    ? "metadata-only"
+    : manifest.extraction.needs_ocr
     ? "needs-ocr"
     : hasText
       ? "extracted"
@@ -120,6 +129,7 @@ const catalog = {
     sources: sources.length,
     non_empty_texts: sources.filter((source) => source.extraction_status === "extracted").length,
     needs_ocr: sources.filter((source) => source.extraction_status === "needs-ocr").length,
+    metadata_only: sources.filter((source) => source.extraction_status === "metadata-only").length,
     categories: counts,
   },
   sources,

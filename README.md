@@ -23,6 +23,7 @@ Start with [`library/README.md`](library/README.md), the machine-readable
 - two complete additional works found and ingested during web research;
 - an author-linked catalog of further books and public mirrors;
 - page-preserving text exports for full-text search;
+- metadata-only records for material carrying an explicit reproduction restriction;
 - three visual PDFs marked `needs-ocr` rather than treated as complete text;
 - two locally collected image references with checksums;
 - one locally saved video transcript that points to a Ken Wheeler interview;
